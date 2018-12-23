@@ -58,3 +58,9 @@ docker run --name some-redis -v F:/dockerData/redis/data:/data -p 6379:6379 -d r
 docker run -d --name some-rabbit  -p 15672:15672 rabbitmq:3-management
 ```
 
+### 查看容器日志
+
+```bash
+ docker service logs -f --tail 100 sale_service
+```
+
