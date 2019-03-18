@@ -45,3 +45,6 @@
 > `npm -v`
 >
 > 都成功返回版本号，则安装成功
+
+### nvm在terminal每次启动都要重新设置use
+> `nvm alias default stable`
