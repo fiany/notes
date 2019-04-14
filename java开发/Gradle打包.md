@@ -13,6 +13,8 @@ bootJar {
 ```groovy
 
 bootJar {
+    // 修改打包名称
+    archiveName = 'whatever.jar' 
 	launchScript()
 }
 ```
