@@ -35,3 +35,9 @@ ssh -t root@192.168.0.1 "cd /apps/test_console ; sh start.sh"
 nohup java -jar  app.jar --spring.profiles.active=test  > temp.log 2>&1 &
 ```
 
+### 本地拷贝文件到服务器
+
+```bash
+scp target/app.jar root@q92.168.0.1:/apps/app.jar
+```
+

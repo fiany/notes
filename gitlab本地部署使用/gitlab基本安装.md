@@ -2,7 +2,7 @@
 
 ### 为什么使用gitlab
 
-### gitlab相对其他服务的有点
+### gitlab相对其他服务的优点
 
 ### gitlab本地部署
 
