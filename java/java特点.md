@@ -15,7 +15,7 @@
 
 #### java虚拟机
 
-![](..\assets\2019-04-17-134816.png)
+![](../assets/2019-04-17-134816.png)
 
 - Class Loader:依据特定格斯，加载class文件到内存
 - Execution Engine ：对命令进行解析
@@ -94,7 +94,7 @@ public class MyClassLoader extends ClassLoader{
 
 #### 类加载器的双亲委派机制
 
-![](..\assets\2019-04-17-150748.png)
+![](../assets/2019-04-17-150748.png)
 
 ### 类的加载方式
 
