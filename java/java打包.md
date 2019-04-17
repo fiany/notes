@@ -1,3 +1,30 @@
+## java打包
+
+### Gradle打包
+
+#### 不包含依赖包进行打包
+
+```groovy
+bootJar {
+	classifier = 'boot'
+	excludes = ["*.jar"]
+	}
+
+```
+
+#### 包含依赖包
+
+```groovy
+
+bootJar {
+    // 修改打包名称
+    archiveName = 'whatever.jar' 
+	launchScript()
+}
+```
+
+### Maven打包
+
 #### 将依赖jar包单独出来
 
 ```xml
@@ -51,4 +78,6 @@
     </executions>
 </plugin>
 ```
+
+
 
