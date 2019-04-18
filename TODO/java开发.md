@@ -6,6 +6,7 @@
 - [ ] SessionStrategy
 - [ ] java垃圾回收之新生代垃圾收集器之后
 - [ ] java内存模型考题之后
+- [ ] synchronized底层原理实现
 
 
 
