@@ -14,6 +14,8 @@ linux启动redis
 redis-server
 # 后台启动
 redis-server & 
+# centos 启动
+redis-server /etc/redis.conf
 ```
 
 连接redis
