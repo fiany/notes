@@ -1,7 +1,10 @@
 linux安装redis
 
 ```bash
+# ubuntu
 apt-get install redis-server
+# centos
+yum install redis
 ```
 
 linux启动redis
