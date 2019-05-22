@@ -1,8 +1,10 @@
 ## RabbitMq安装
 
-### erlang安装
+### centos安装
 
-#### 下载地址
+#### erlang安装
+
+##### 下载地址
 
 <https://packages.erlang-solutions.com/erlang/>
 
@@ -13,11 +15,9 @@ wget http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/
 yum install esl-erlang_22.0-1~centos~7_amd64.rpm
 ```
 
+#### RabbitMq安装
 
-
-### RabbitMq安装
-
-#### 下载地址
+##### 下载地址
 
 <https://www.rabbitmq.com/install-rpm.html#downloads>
 
@@ -27,6 +27,34 @@ wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.7.14/rabbi
 # 安装
 yum install rabbitmq-server-3.7.14-1.el7.noarch.rpm
 ```
+
+### ubuntu安装rabbitmq
+
+- 添加源
+
+  将下面的源添加到`/etc/apt/sources.list`中。
+
+  ```bash
+  deb http://www.rabbitmq.com/debian/ testing main
+  ```
+
+- 更新
+
+  ```bash
+  sudo apt-get update
+  ```
+
+- 执行安装
+
+  ```bash
+  sudo apt-get install rabbitmq-server
+  ```
+
+  可能在安装中提示无法验证安装包问题，这是因为没有添加公钥到信任列表，可以这样：
+
+  ```bash
+  wget http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
+  ```
 
 ### 启动RabbitMq
 
