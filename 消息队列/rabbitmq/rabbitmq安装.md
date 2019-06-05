@@ -10,9 +10,9 @@
 
 ```bash
 # 下载
-wget http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_22.0-1~centos~7_amd64.rpm
+wget https://packages.erlang-solutions.com/erlang/rpm/centos/7/x86_64/esl-erlang_22.0.1-1~centos~7_amd64.rpm
 # 安装
-yum install esl-erlang_22.0-1~centos~7_amd64.rpm
+yum install esl-erlang_22.0.1-1~centos~7_amd64.rpm
 ```
 
 #### RabbitMq安装
@@ -26,6 +26,24 @@ yum install esl-erlang_22.0-1~centos~7_amd64.rpm
 wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.7.14/rabbitmq-server-3.7.14-1.el7.noarch.rpm
 # 安装
 yum install rabbitmq-server-3.7.14-1.el7.noarch.rpm
+```
+
+#### 执行报错
+
+```bash
+Error: Package: rabbitmq-server-3.7.14-1.el7.noarch (/rabbitmq-server-3.7.14-1.el7.noarch)
+           Requires: erlang >= 20.3
+           Available: erlang-R16B-03.18.el7.x86_64 (epel)
+               erlang = R16B-03.18.el7
+ You could try using --skip-broken to work around the problem
+ You could try running: rpm -Va --nofiles --nodigest
+
+```
+
+版本问题选择跳过，使用下面的命令继续安装，安装成功。
+
+```bash
+rpm -ivh --nodeps rabbitmq-server-3.7.14-1.el7.noarch.rpm
 ```
 
 ### ubuntu安装rabbitmq
