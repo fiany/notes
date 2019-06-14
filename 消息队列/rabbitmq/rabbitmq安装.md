@@ -95,3 +95,10 @@ rabbitmqctl set_user_tags name administrator
 rabbitmqctl set_permissions -p / name ".*" ".*" ".*"
 ```
 
+### guest无法远程访问
+
+```bash
+#将rabbitmq安装目录下ebin目录下rabbit.app中loopback_users里的guest删除，重启rabbitmq服务
+find / -name rabbit.app
+```
+
