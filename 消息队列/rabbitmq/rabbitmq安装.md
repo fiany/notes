@@ -79,12 +79,14 @@ rpm -ivh --nodeps rabbitmq-server-3.7.14-1.el7.noarch.rpm
 ```bash
 # 启动RabbitMQ服务
 service rabbitmq-server start
+systemctl start rabbitmq-server
 # 状态查看
 rabbitmqctl status
 # 启用插件
 rabbitmq-plugins enable rabbitmq_management
 # 重启服务
 service rabbitmq-server restart
+systemctl restart rabbitmq-server
 # 添加帐号:name 密码:passwd
 rabbitmqctl add_user name passwd
 # 赋予其administrator角色
