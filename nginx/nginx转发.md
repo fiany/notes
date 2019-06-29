@@ -10,7 +10,7 @@ location /v1/ {
 # http://localhost/v1/abc ==> http://localhost/abc 达到去除v1的目的
 ```
 
-- 另一种方案是使用`rewrite` **(需要测试，暂做记录)**
+- 另一种方案是使用`rewrite` 
 
 ```nginx
 location /v1/ {
