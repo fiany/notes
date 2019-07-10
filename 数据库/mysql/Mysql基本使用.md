@@ -10,7 +10,7 @@
 
 ##### 创建可以远程登陆的用户
 
-- `CREATE USER 'g3user'@'%' IDENTIFIED BY 'g3user';`
+- `CREATE USER 'root'@'%' IDENTIFIED BY 'root';`
 
 ##### 用户密码30天过期
 
@@ -19,6 +19,15 @@
 ##### 用户密码永不过期
 
 - CREATE USER IF NOT EXISTS 'test' IDENTIFIED BY 'test' PASSWORD EXPIRE NEVER;
+
+##### 数据库密码不能设置过于简单
+
+```bash
+# 设置密码安全程度为最低
+set global validate_password_policy=0;
+# 设置密码长度
+set global validate_password_length=4;
+```
 
 ##### 登陆状态修改用户密码
 
