@@ -74,6 +74,7 @@ Executed_Gtid_Set:
 ```bash
 
 CHANGE MASTER TO master_host = '172.16.0.6'
+,master_port = 3306
 ,master_user = 'root'
 ,master_password = 'root'
 ,master_log_file = 'mysql-bin.000001'
