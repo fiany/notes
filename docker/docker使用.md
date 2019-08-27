@@ -1,5 +1,18 @@
 ## docker安装
 
+- 配置阿里云镜像加速
+
+```bash
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+    {
+        "registry-mirrors": ["https://khexb3wi.mirror.aliyuncs.com"]
+    }
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
 - ubuntu 
 
   执行两个命令：
