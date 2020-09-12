@@ -71,6 +71,18 @@ docker run --name some-redis -v F:/dockerData/redis/data:/data -p 6379:6379 -d r
 docker run -d --name some-rabbit  -p 15672:15672 rabbitmq:3-management
 ```
 
+### 启动elasticsearch
+
+- linux
+
+```bash
+docker run -e ES_JAVA_OPTS="-Xms256m -Xmx256m" -d -p 9200:9200 -p 9300:9300  --name es-master elasticsearch:6.7.0
+# 安装中文分词（需要进入容器）
+./bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v6.7.0/elasticsearch-analysis-ik-6.7.0.zip
+```
+
+
+
 ### 查看容器日志
 
 ```bash
