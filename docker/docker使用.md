@@ -68,7 +68,7 @@ docker run --name some-redis -v F:/dockerData/redis/data:/data -p 6379:6379 -d r
 - windows
 
 ```bash
-docker run -d --name some-rabbit  -p 15672:15672 rabbitmq:3-management
+docker run -d --hostname localhost --name myrabbit -p 15672:15672 -p 5672:5672 rabbitmq:3.6.15-management
 ```
 
 ### 启动elasticsearch
